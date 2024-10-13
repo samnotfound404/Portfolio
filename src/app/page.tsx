@@ -18,7 +18,6 @@ export default function Portfolio() {
   ]
 
   const experiences = [
-  
     { id: 3, role: 'Gymkhana Member', company: 'Gymkhana Team', period: '', description: 'Contributing to college websites like Inter IIT and Training and Placement Cell.' },
     { id: 4, role: 'Intern', company: 'Venture Sync', period: 'Summer 2024', description: 'Worked on various projects in a Bangalore-based startup.' },
   ]
@@ -39,17 +38,6 @@ export default function Portfolio() {
     { icon: SiNextdotjs, name: 'Next.js', color: 'text-black' },
     { icon: FaDatabase, name: 'Databases', color: 'text-purple-500' },
   ]
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: -20 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.2,
-      },
-    }),
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
@@ -121,7 +109,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {projects.map((project) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -170,7 +158,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Experience</h2>
           <div className="space-y-8">
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <motion.div
                 key={exp.id}
                 initial={{ opacity: 0, x: -20 }}
@@ -192,7 +180,7 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement) => (
               <motion.div
                 key={achievement.id}
                 initial={{ opacity: 0, scale: 0.9 }}
